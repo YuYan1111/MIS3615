@@ -1,5 +1,4 @@
-
-from math import sqrt
+import match
 
 print("Quadratic function: ax**2+bx+c=0")
 
@@ -8,21 +7,25 @@ a = float(input("a: "))
 b = float(input("b: "))
 c = float(input("c: "))
 
-#Discriminant
-d = (b**2) - (4*a*c)
-
 def quadratic(a, b, c):
-    if d > 0:
-        discriminant = 2
-        x1 = (((-b) + sqrt(d))/(2*a))
-        x2 = (((-b) - sqrt(d))/(2*a))
-        return("The answers are {} and {}" .format(x1, x2))
-    elif d == 0:
-        discriminant = 1
-        x = (-b)/(2*a)
-        return("The answer is {}" .format(x))
-    else:
-        discriminant = 0
-        return("No answer")
+Discriminant = b**2 - 4*a*c
 
-print(quadratic(a, b, c))
+    if Discriminant >= 0:
+        x1 = (((-b) + math.sqrt(Discriminant))/(2*a))
+        x2 = (((-b) - math.sqrt(Discriminant))/(2*a))
+        return x_1, x_2
+    else:
+        return None, None
+    def main()
+        a = float(input("a: "))
+        b = float(input("b: "))
+        c = float(input("c: "))
+    
+    sol_1,sol_2 = quadratic(a,b,d)
+    if sol_1:
+        print(f"The roots of the equation are (sol_1) and (Sol_2).")
+    else:
+        print("No real number soution")
+
+    if _name_ =="__main__":
+        main()
